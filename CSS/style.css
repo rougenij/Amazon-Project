@@ -39,21 +39,175 @@
   border: 1px white solid;
 }
 .middlenavbar {
-  padding: 0 1rem;
+  margin-left: 2rem;
   margin-top: 1rem;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  border: transparent 3px solid;
 }
-
-.searchbar {
-  width: 10rem;
+.middlenavbar:hover {
+  border: orange 3px solid;
 }
-
+.searchbuttonimage {
+  background-color: orange;
+}
+#dropdown {
+  height: 2rem;
+}
+.searchdopmenu input {
+  width: 50rem;
+  height: 2rem;
+}
+.rightsidenavbar {
+  display: flex;
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+}
 /* Lower Nav-Bar */
 .lowernavbar {
   background-color: #232f3e;
   width: 100%;
-  height: 3vh;
+  height: 5vh;
 }
+.lowernavbarlist {
+  list-style: none;
+  display: flex;
+  color: white;
+}
+.lowernavbarlist li {
+  padding: 1rem;
+  border: 1px solid transparent;
+}
+.lowernavbarlist li:hover {
+  border: 1px solid white;
+}
+/* Black Friday Deal under Nav-Bar */
+.blackfriday {
+  display: flex;
+  justify-content: center;
+}
+/* BreadCrumbs UI */
+.breadcrumbslist {
+  padding: 1rem 9rem;
+  list-style: none;
+}
+.breadcrumbslist li {
+  display: inline;
+  font-size: 0.8rem;
+}
+.breadcrumbslist li + li:before {
+  padding: 0.2rem;
+  color: black;
+  content: ">";
+}
+.breadcrumbslist li a {
+  color: grey;
+  text-decoration: none;
+}
+.breadcrumbslist li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Section */
+.maincontainers {
+  display: flex;
+  flex-direction: row;
+  padding: 0 5rem;
+  justify-content: space-between;
+  height: 200vh;
+}
+.picLeft {
+  display: flex;
+  width: 100%;
+}
+.middlecontainer {
+  display: flex;
+  width: 100%;
+}
+.rightcontainer {
+  display: flex;
+  width: 100%;
+}
+/* Left Container */
+.picLeft {
+  height: 420px;
+  position: sticky;
+  top: 5px;
+}
+
+.imageGal {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.galimg {
+  width: 42px;
+  height: 42px;
+  border: 1px #8d8d8d solid;
+  margin-bottom: 8px;
+  padding: 1px 1px;
+}
+
+.galimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.galimg:hover {
+  cursor: pointer;
+  border-color: #e47911;
+  box-shadow: 0px 0px 4px 2px #f90;
+}
+
+.imgBig {
+  display: none;
+  position: absolute;
+  left: 100px;
+  top: 50px;
+  white-space: nowrap;
+  max-width: 100%;
+  height: 100%;
+}
+
+#image1 {
+  display: block;
+}
+
+.imgBig img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#img2:hover ~ #image1,
+#img3:hover ~ #image1,
+#img4:hover ~ #image1,
+#img5:hover ~ #image1,
+#img6:hover ~ #image1 {
+  display: none;
+}
+
+#img2:hover ~ #image2 {
+  display: block;
+}
+#img3:hover ~ #image3 {
+  display: block;
+}
+#img4:hover ~ #image4 {
+  display: block;
+}
+#img5:hover ~ #image5 {
+  display: block;
+}
+#img6:hover ~ #image6 {
+  display: block;
+}
+
+body {
+  height: 150vh;
+}
+
+/* Middle Main Container */
