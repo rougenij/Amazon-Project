@@ -138,6 +138,69 @@ const carousel = [
     price: 23.99,
   },
 ];
+let uppervalue = 7;
+let lowervalue = 0;
+const slide = document.getElementsByClassName("carousel")[0];
+const fillSlideShow = () => {
+  slide.innerHTML = "";
+  const prev = document.createElement("button");
+  prev.addEventListener("click", () => {
+    uppervalue -= 7;
+    lowervalue -= 7;
+    if (lowervalue < 0) {
+      uppervalue = carousel.length;
+      lowervalue = uppervalue - 7;
+    }
+    fillSlideShow();
+  });
+  slide.appendChild(prev);
+  carousel.forEach((item, index) => {
+    const productImg = document.createElement("img");
+    const desc = document.createElement("p");
+    const rating = document.createElement("img");
+    const votes = document.createElement("span");
+    const price = document.createElement("p");
+    const container = document.createElement("div");
+    const ratingandvotes = document.createElement("div");
+    if (index >= lowervalue && index < uppervalue) {
+      productImg.src = item.img;
+      productImg.classList.add("smallimg");
+      desc.textContent = item.title;
+      desc.classList.add("carouseldesc");
+      rating.src = "../Imgs/4-and-a-half-stars.png";
+      rating.classList.add("carouselrating");
+      votes.textContent = item.votes;
+      votes.classList.add("carouselvotes");
+      price.textContent = `$${item.price}`;
+      price.classList.add("carouselprice");
+      container.classList.add("container");
+      ratingandvotes.classList.add("ratingandvotes");
+      container.appendChild(productImg);
+      container.appendChild(desc);
+      ratingandvotes.appendChild(rating);
+      ratingandvotes.appendChild(votes);
+      container.appendChild(ratingandvotes);
+      container.appendChild(price);
+      slide.appendChild(container);
+    }
+  });
+  const next = document.createElement("button");
+
+  next.textContent = ">";
+  prev.textContent = "<";
+  next.addEventListener("click", () => {
+    uppervalue += 7;
+    lowervalue += 7;
+    if (uppervalue > carousel.length) {
+      uppervalue = 7;
+      lowervalue = uppervalue - 7;
+    }
+    fillSlideShow();
+  });
+
+  slide.appendChild(next);
+};
+fillSlideShow();
 
 // Expand More Button
 function myFunction() {

@@ -12,7 +12,6 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script src="/scripts/script.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -215,26 +214,40 @@
           </div>
         </div>
         <div class="rightcontainer">
-          <div class="price"></div>
-          <div class="shippingfees"></div>
-          <div class="arrivesdate"></div>
-          <div class="locationdelivery"></div>
-          <div class="IsInStock"></div>
-          <div class="buttons">
-            <div class="addtoCart"></div>
-            <div class="buynow"></div>
+          <div class="price">$1,349.99</div>
+          <div class="shippingfees">$418.31 Shipping & Import Fees Deposit to Israel Details</div>
+          <div class="arrivesdate">Arrives: Wednesday, Dec 8</div>
+          <div class="locationdelivery"><i class="bx bx-map"></i> Deliver to Rouge - Haifa 35</div>
+          <div class="IsInStock">In Stock.</div>
+          <div class="amount">
+            <select name="qty" id="qty">
+              <option value="">Qty : 1</option>
+              <option value="">Qty : 2</option>
+            </select>
           </div>
-          <div class="securewithicon"></div>
-          <div class="shipsfrom"></div>
-          <div class="soldby"></div>
-          <div class="returnpolicy"></div>
-          <div class="support"></div>
-          <div class="checkbox"></div> <!-- Add border to last one-->
-          <div class="addtolist"></div>
+          <div class="buttons">
+            <div class="addtoCart"><button> Add to Cart</button></div>
+            <div class="buynow"><button>Buy Now</button></div>
+          </div>
+          <div class="securewithicon"><i class='bx bxs-lock-alt'></i> Secure transaction</div>
+          <div class="shipsfrom"> Ships from Amazon.com</div>
+          <div class="soldby">Sold by Amazon.com</div>
+          <div class="returnpolicy">Return policy : <a href="#">Returnable untill Jan 31,2022</a></div>
+          <div class="support">Support : <a href="#">Free Amazon tech support included</a></div>
+          <div class="checkbox">
+            <p><input type="checkbox" name="one" id="one"><a href="#">SAVE $30 on Microosft 365 Family | Premium Office... $69.99</a></p>
+            <p><input type="checkbox" name="two" id="two"><a href="#">Savve $30 at checkout | Adobe Acrobat Pro DC subscr... $179.99</a></p>
+            <p><input type="checkbox" name="three" id="three"><a href="#">McAfee Total Protection - 3 Devices $16.99</a></p>
+            <p><input type="checkbox" name="four" id="four"><a href="#">TurboTax Deluxe 2021 Tax Software,Federal and Sta... $49.99</a></p>
+            <input type="checkbox" name="five" id="five">Add a gift receipt for easy returns
+          </div> <!-- Add border to last one-->
         </div>
         </div>
       </div>
     </main>
-    <hr>
+    <section class="carouselsection">
+      <div class="carousel"></div>
+    </section>
+    <script src="/scripts/script.js"></script>
   </body>
 </html>
