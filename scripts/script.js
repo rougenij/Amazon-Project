@@ -1,14 +1,3 @@
-/* Resize select width according to selected text */
-$(document).ready(function () {
-  $("#width_tmp_option").html($("#dropdown option:selected").text());
-  $("#dropdown").width($("#width_tmp_select").width());
-
-  $("#dropdown").change(function () {
-    $("#width_tmp_option").html($("#dropdown option:selected").text());
-    $(this).width($("#width_tmp_select").width());
-  });
-});
-
 // Array of carousel
 const carousel = [
   {
@@ -218,3 +207,34 @@ function myFunction() {
     moreText.style.display = "inline";
   }
 }
+
+// Add to Cart Button
+$(document).ready(function () {
+  //create variable
+  var counts = 0;
+  $(".addtocart").click(function () {
+    //to number and increase to 1 on each click
+    counts += +1;
+    $(".cart-counter").animate(
+      {
+        //show span with number
+        opacity: 1,
+      },
+      300,
+      function () {
+        //write number of counts into span
+        $(this).text(counts);
+      }
+    );
+  });
+});
+/* Resize select width according to selected text */
+$(document).ready(function () {
+  $("#width_tmp_option").html($("#dropdown option:selected").text());
+  $("#dropdown").width($("#width_tmp_select").width());
+
+  $("#dropdown").change(function () {
+    $("#width_tmp_option").html($("#dropdown option:selected").text());
+    $(this).width($("#width_tmp_select").width());
+  });
+});
