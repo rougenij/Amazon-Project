@@ -338,6 +338,9 @@
   background-color: #ffd814;
   font-family: "Amazon Ember, Arial, sans-serif;";
 }
+.addtoCart button:hover {
+  cursor: pointer;
+}
 .buynow button {
   padding: 0.4rem 5.6rem;
   border-radius: 1rem;
