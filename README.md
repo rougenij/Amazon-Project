@@ -1,6 +1,5 @@
 # Amazon-Project
 
----------------------
 [Live Demo: Amazon Mockup](https://rougenij-amazon.netlify.app/)
 ------------------
 
@@ -21,5 +20,5 @@ The idea behind this project was to find how pixel perfect a mockup site can be.
 
 ### CopyRight Claim
 
-[Discord](https://www.amazon.com/)
+[Amazon](https://www.amazon.com/)
 
